@@ -1,8 +1,8 @@
 # **_Connect 4 EXTREME!!!_**
 
-![Alt Text](https://i.gifer.com/KbYJ.gif)
-
 ## Date: 10/02/2022
+
+![Alt Text](https://i.gifer.com/KbYJ.gif)
 
 ### By: Erwin Ortiz
 
@@ -11,6 +11,8 @@
 ---
 
 ### **_Description_**
+
+![Alt Text](https://i.gifer.com/KbYJ.gif)
 
 #### **_Connect 4 EXTREME!!!!_**
 
@@ -36,7 +38,7 @@
 
 ##### Current version 0.1v 10/02/2022
 
----
+## ![Alt Text](https://i.gifer.com/KbYJ.gif)
 
 ### **_Future Updates_**
 
