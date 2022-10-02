@@ -10,9 +10,7 @@
 
 ---
 
-### **_Description_**
-
-![Alt Text](https://i.gifer.com/KbYJ.gif)
+### **_Description_** ![Alt Text](https://miro.medium.com/max/1280/1*A5b630g96x9PrhwB9Mvf1w.png)
 
 #### **_Connect 4 EXTREME!!!!_**
 
@@ -30,7 +28,7 @@
 
 ##### Created repository on 10/02/2022.
 
-##### A Trello board was used to keep track of development progress and can be viewed [here]https://trello.com/b/akfU60ao/connect-4-extreme).
+##### A Trello board was used to keep track of development progress and can be viewed [here](https://trello.com/b/akfU60ao/connect-4-extreme).
 
 ##### The project itself was deployed and can be viewed [here](https://github.com/eortiz65/Connect-4-EXTREME).
 
