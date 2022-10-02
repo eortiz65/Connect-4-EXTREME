@@ -10,7 +10,9 @@
 
 ---
 
-### **_Description_** ![Alt Text](https://miro.medium.com/max/1280/1*A5b630g96x9PrhwB9Mvf1w.png)
+### **_CONNECT 4!!!!_**
+
+![Alt Text](https://miro.medium.com/max/1280/1*A5b630g96x9PrhwB9Mvf1w.png)
 
 #### **_Connect 4 EXTREME!!!!_**
 
@@ -49,5 +51,7 @@
 ### **_Credits_**
 
 ##### Gifs: [Gifer.com](https://i.gifer.com/)
+
+##### Images [Medium.com](https://miro.medium.com/)
 
 ---
