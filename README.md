@@ -1,12 +1,12 @@
 # **_Connect 4 EXTREME!!!_**
 
-![Alt Text](https://i.gifer.com/NGhE.mp4)
+![Alt Text](https://i.gifer.com/KbYJ.gif)
 
 ## Date: 10/02/2022
 
 ### By: Erwin Ortiz
 
-#### [Website](https://github.com/eortiz65/Connect-4-EXTREME-) | [GitHub](https://github.com/eortiz65) | [LinkedIn](https://www.linkedin.com/in/erwin-ortiz-54ab13141/)
+#### [Website](https://github.com/eortiz65/Connect-4-EXTREME) | [GitHub](https://github.com/eortiz65) | [LinkedIn](https://www.linkedin.com/in/erwin-ortiz-54ab13141/)
 
 ---
 
@@ -30,13 +30,9 @@
 
 ##### A Trello board was used to keep track of development progress and can be viewed [here]https://trello.com/b/akfU60ao/connect-4-extreme).
 
-##### The project itself was deployed and can be viewed [here](https://github.com/eortiz65/Connect-4-EXTREME-).
+##### The project itself was deployed and can be viewed [here](https://github.com/eortiz65/Connect-4-EXTREME).
 
 ---
-
-##### Boring Connect 4 down here...
-
-![Gif](https://i.gifer.com/KbYJ.gif)
 
 ##### Current version 0.1v 10/02/2022
 
