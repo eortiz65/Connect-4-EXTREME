@@ -1,2 +1,57 @@
-# Connect-4-EXTREME
-Connect 4 but with a twist
+# **_Connect 4 EXTREME!!!_**
+
+![Alt Text](https://i.gifer.com/NGhE.mp4)
+
+## Date: 10/02/2022
+
+### By: Erwin Ortiz
+
+#### [Website](https://github.com/eortiz65/Connect-4-EXTREME-) | [GitHub](https://github.com/eortiz65) | [LinkedIn](https://www.linkedin.com/in/erwin-ortiz-54ab13141/)
+
+---
+
+### **_Description_**
+
+#### **_Connect 4 EXTREME!!!!_**
+
+---
+
+### **_Some Ideas for the EXTREME part_**
+
+- Idea 1 Create a timer to put pressure on the player.
+- Idea 2 Make the player get penalyzed in sort some of way (skips turn, random moved on purpose, etc).
+- Idea 3 Make two levels, one for vs pc, the other vs other player.
+
+---
+
+### **_Let the journey begin!_**
+
+##### Created repository on 10/02/2022.
+
+##### A Trello board was used to keep track of development progress and can be viewed [here]https://trello.com/b/akfU60ao/connect-4-extreme).
+
+##### The project itself was deployed and can be viewed [here](https://github.com/eortiz65/Connect-4-EXTREME-).
+
+---
+
+##### Boring Connect 4 down here...
+
+![Gif](https://i.gifer.com/KbYJ.gif)
+
+##### Current version 0.1v 10/02/2022
+
+---
+
+### **_Future Updates_**
+
+- [ ] Future Update 1
+- [ ] Future Update 2
+- [ ] Completed Update
+
+---
+
+### **_Credits_**
+
+##### Gifs: [Gifer.com](https://i.gifer.com/)
+
+---
