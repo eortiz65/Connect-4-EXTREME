@@ -32,7 +32,7 @@
 
 ##### A Trello board was used to keep track of development progress and can be viewed [here](https://trello.com/b/akfU60ao/connect-4-extreme).
 
-##### The project itself was deployed and can be viewed [here](https://github.com/eortiz65/Connect-4-EXTREME).
+##### The project itself was deployed and can be viewed [here](eortiz65-Connect-4.surge.sh).
 
 ---
 
