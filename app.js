@@ -37,9 +37,43 @@ gameStart = () => {
       let tile = document.createElement('div')
       tile.id = r.toString() + '-' + c.toString()
       tile.classList.add('tile')
-      tile.addEventListener('click', setPiece)
+      tile.addEventListener('click', addPiece)
       document.getElementById('board').append(tile)
     }
     board.push(row)
   }
+}
+
+addPiece = () => {
+  if (winner) {
+    return
+  }
+
+  //get coords of that tile clicked
+  let coords = this.id.split('-')
+  let r = parseInt(coords[0])
+  let c = parseInt(coords[1])
+
+  // figure out which row the current column should be on
+  r = columnIndex[c]
+
+  if (r < 0) {
+    // board[r][c] != ' '
+    return
+  }
+
+  board[r][c] = currPlayer //update JS board
+  let tile = document.getElementById(r.toString() + '-' + c.toString())
+  if (currPlayer == playerBlack) {
+    tile.classList.add('black-piece')
+    currPlayer = playerBlue
+  } else {
+    tile.classList.add('black-piece')
+    currPlayer = playerBlack
+  }
+
+  r -= 1 //update the row height for that column
+  columnIndex[c] = r //update the array
+
+  checkWinner()
 }
