@@ -12,14 +12,14 @@ body {
 h1 {
   font-size: 8vmin;
   font-weight: normal;
-  color: rgb(255, 255, 0);
+  color: rgb(241, 241, 4);
   
 }
 #board {
 	height: 540px;
 	width: 630px;
-	background-color: black;
-	border: 15px solid yellow;	
+	background-color: rgb(8, 6, 6);
+	border: 15px solid rgb(238, 238, 20);	
 	margin: 0 auto;
 	display: flex;
 	flex-wrap: wrap;
