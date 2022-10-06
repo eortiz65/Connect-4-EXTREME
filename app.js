@@ -7,7 +7,7 @@ let winnerPlayer = false
 let board
 let columns = 7
 let rows = 6
-let columnIndex = []
+let columnIndex
 
 const startGame = document.getElementById('play')
 // window.onload = () => {
@@ -92,7 +92,15 @@ checkWinner = () => {
 
 gameStart = () => {
   board = []
-  columnIndex = [5, 5, 5, 5, 5, 5, 5]
+  columnIndex = [
+    rows - 1,
+    rows - 1,
+    rows - 1,
+    rows - 1,
+    rows - 1,
+    rows - 1,
+    rows - 1
+  ]
   startGame.style.visibility = `hidden`
 
   for (let r = 0; r < rows; r++) {
@@ -118,7 +126,7 @@ setPiece = () => {
   }
 
   //get coords of that tile clicked
-  let coords = this.id.split(`-`, 0)
+  let coords = this.id.split(`-`)
 
   let r = parseInt(coords[0])
   let c = parseInt(coords[1])
