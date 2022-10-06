@@ -5,51 +5,41 @@ body {
   align-items: center;
   justify-content: space-around;
   background-image: url("https://i.ytimg.com/vi/qLM_TPvp-Q4/maxresdefault.jpg");
-	background-color: black;
   background-size: cover;
   text-align: center;
-  color: white;
   font-family: 'Verdana', sans-serif;
 }
 h1 {
   font-size: 8vmin;
   font-weight: normal;
+  color: rgb(255, 255, 0);
   
 }
 #board {
 	height: 540px;
 	width: 630px;
 	background-color: black;
-	border: 15px solid rgb(5, 245, 5);
-	
+	border: 15px solid yellow;	
 	margin: 0 auto;
 	display: flex;
 	flex-wrap: wrap;
 }
+
 .tile {
     height: 70px;
     width: 70px;
-    margin: 5px;
-
-    /* Circle */
-    background-color: white;
+    margin: 5px;    
+    background-color: rgb(167, 129, 129);
     border-radius: 50%;
     border: 5px solid yellow;
 }
 
+.blue-piece {
+    background-color: solid blue;
+}
+
 .red-piece {
-    background-color: red;
-}
-
-.yellow-piece {
-    background-color: yellow;
-}
-
-#message {
-  font-size: 8vmin;
-  font-weight: normal;
-  margin-bottom: 3vh;
-  color: red
+    background-color:solid red;
 }
 
 #play {

@@ -1,56 +1,125 @@
 ////////////////////////////////
 // Global Variables Here
-let playerBlack = 'Black'
 let playerBlue = 'Blue'
-let playerTurn = playerBlack
-let winner = false
-let count
+let playerRed = 'Red'
+let playerTurn = playerBlue
+let winnerPlayer = false
+let board
 let columns = 7
 let rows = 6
 let columnIndex = []
 
-const message = document.getElementById('message')
-const playAgain = document.getElementById('play')
+const startGame = document.getElementById('play')
+// window.onload = () => {
+//   gameStart()
+// }
 
-window.onload = () => {
-  gameStart()
+setWinner = (r, c) => {
+  let winner = document.getElementById('winner')
+  if (board[r][c] === playerBlue) {
+    winner.innerText = `${playerBlue} Wins`
+  } else {
+    winner.innerText = `${playerRed} Wins`
+  }
+  winnerPlayer = true
 }
 
-// playAgain.addEventListener(`click`, gameStart)
+checkWinner = () => {
+  // starting from 0-0 horizontal winning condition -3 on columns cause no point in checking beyond the boundaries of connect 4
+  for (let r = 0; r < rows; r++) {
+    for (let c = 0; c < columns - 3; c++) {
+      if (board[r][c] != ' ') {
+        if (
+          board[r][c] === board[r][c + 1] &&
+          board[r][c + 1] === board[r][c + 2] &&
+          board[r][c + 2] === board[r][c + 3]
+        ) {
+          setWinner(r, c)
+          return
+        }
+      }
+    }
+  }
 
-setPiece = () => {
-  if (winner) {
-    return
+  // same concept but with the rows - 3 instead of columns for vertical win condition
+  for (let c = 0; c < columns; c++) {
+    for (let r = 0; r < rows - 3; r++) {
+      if (board[r][c] != ' ') {
+        if (
+          board[r][c] === board[r + 1][c] &&
+          board[r + 1][c] === board[r + 2][c] &&
+          board[r + 2][c] === board[r + 3][c]
+        ) {
+          setWinner(r, c)
+          return
+        }
+      }
+    }
+  }
+
+  // diagonal upwards checking as goin up the stairs
+  for (let r = 0; r < rows - 3; r++) {
+    for (let c = 0; c < columns - 3; c++) {
+      if (board[r][c] != ' ') {
+        if (
+          board[r][c] === board[r + 1][c + 1] &&
+          board[r + 1][c + 1] === board[r + 2][c + 2] &&
+          board[r + 2][c + 2] === board[r + 3][c + 3]
+        ) {
+          setWinner(r, c)
+          return
+        }
+      }
+    }
+  }
+
+  // diagonal  downwards same deal but we goin with negatives in the row to go down the stairs
+  for (let r = 3; r < rows; r++) {
+    for (let c = 0; c < columns - 3; c++) {
+      if (board[r][c] != ' ') {
+        if (
+          board[r][c] === board[r - 1][c + 1] &&
+          board[r - 1][c + 1] === board[r - 2][c + 2] &&
+          board[r - 2][c + 2] === board[r - 3][c + 3]
+        ) {
+          setWinner(r, c)
+          return
+        }
+      }
+    }
   }
 }
 
 gameStart = () => {
   board = []
   columnIndex = [5, 5, 5, 5, 5, 5, 5]
+  startGame.style.visibility = `hidden`
 
   for (let r = 0; r < rows; r++) {
     let row = []
     for (let c = 0; c < columns; c++) {
-      // Js operator to assign value of ` ` for allowing game pieces to be added in the column
+      // Js operator to assign value of ` ` so we can further use that as an indicator to be able to add pieces.
       row.push(' ')
-      // creates the board in HTLM to avoid making all 42 tiles individually
+      // creates the board in HTML to avoid making all 42 tiles individually, it also adds the class and ID for each tile on board, starting on tile 0-0 on the top left of board and ending 5-6 on bottom right and the event listener for the tile to be clicked
       let tile = document.createElement('div')
-      tile.id = r.toString() + '-' + c.toString()
-      tile.classList.add('tile')
-      tile.addEventListener('click', addPiece)
-      document.getElementById('board').append(tile)
+      tile.id = r.toString() + `-` + c.toString()
+      tile.classList.add(`tile`)
+      tile.addEventListener(`click`, setPiece) //adds and event listener to each tile so when you click it indicates that column
+      document.getElementById(`board`).append(tile)
     }
     board.push(row)
   }
 }
 
-addPiece = () => {
-  if (winner) {
+setPiece = () => {
+  //Checks if winner is true to avoid adding pieces if game is done
+  if (winnerPlayer) {
     return
   }
 
   //get coords of that tile clicked
   let coords = this.id.split('-')
+
   let r = parseInt(coords[0])
   let c = parseInt(coords[1])
 
@@ -58,22 +127,24 @@ addPiece = () => {
   r = columnIndex[c]
 
   if (r < 0) {
-    // board[r][c] != ' '
-    return
+    return //means column is full so return from function
   }
 
-  board[r][c] = currPlayer //update JS board
-  let tile = document.getElementById(r.toString() + '-' + c.toString())
-  if (currPlayer == playerBlack) {
-    tile.classList.add('black-piece')
-    currPlayer = playerBlue
+  board[r][c] = playerTurn //update the tile to the class of the current player
+  let tile = document.getElementById(r.toString() + `-` + c.toString())
+  if (playerTurn === playerBlue) {
+    tile.classList.add('blue-piece')
+    playerTurn = playerRed
   } else {
-    tile.classList.add('black-piece')
-    currPlayer = playerBlack
+    tile.classList.add('red-piece')
+    playerTurn = playerBlue
   }
 
-  r -= 1 //update the row height for that column
-  columnIndex[c] = r //update the array
+  r -= 1 //update the row height for that column, signifying one more element inside
+  columnIndex[c] = r //update the array height
 
   checkWinner()
 }
+
+//Event call for button to start game
+startGame.addEventListener(`click`, gameStart)
