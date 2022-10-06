@@ -129,10 +129,10 @@ setPiece = () => {
   let coords = this.id
   console.log(coords)
 
-  let r = parseInt(coords[0])
-  let c = parseInt(coords[1])
+  // let r = parseInt(coords[0])
+  // let c = parseInt(coords[1])
 
-  // figure out which row the current column should be on
+  // Changes the value of r to the height of that column so it drops in the proper spot
   r = columnIndex[c]
 
   if (r < 0) {
