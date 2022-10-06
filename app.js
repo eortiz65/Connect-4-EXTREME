@@ -126,7 +126,8 @@ setPiece = () => {
   }
 
   //get coords of that tile clicked
-  let coords = this.id.split(`-`)
+  let coords = this.id
+  console.log(coords)
 
   let r = parseInt(coords[0])
   let c = parseInt(coords[1])
