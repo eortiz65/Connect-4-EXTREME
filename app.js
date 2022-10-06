@@ -13,6 +13,7 @@ const startGame = document.getElementById('play')
 
 gameStart = () => {
   board = []
+  //Change height of the columns based on the row value
   columnIndex = [
     rows - 1,
     rows - 1,
@@ -29,24 +30,53 @@ gameStart = () => {
     for (let c = 0; c < columns; c++) {
       // Js operator to assign value of ` ` so we can further use that as an indicator to be able to add pieces.
       row.push(' ')
-      // creates the board in HTML to avoid making all 42 tiles individually, it also adds the class and ID for each tile on board, starting on tile 0-0 on the top left of board and ending 5-6 on bottom right and the event listener for the tile to be clicked
+      // creates the board in HTML to avoid making all 42 tiles individually, it also adds the class and ID for each tile on board, starting on tile 0-0 on the top left of board and ending 5-6 on bottom right
       let tile = document.createElement('div')
       tile.id = r.toString() + `-` + c.toString()
       tile.classList.add(`tile`)
-      tile.addEventListener(`click`, setPiece) //adds and event listener to each tile so when you click it indicates that column
+      tile.addEventListener(`click`, setPiece) //adds an event listener to each tile to call setPiece
       document.getElementById(`board`).append(tile)
     }
     board.push(row)
   }
 }
-setWinner = (r, c) => {
-  let winner = document.getElementById('winner')
-  if (board[r][c] === playerBlue) {
-    winner.innerText = `${playerBlue} Wins`
-  } else {
-    winner.innerText = `${playerRed} Wins`
+
+setPiece = () => {
+  //Checks if winner is true to avoid adding pieces if game is done document.querySelector("#board")
+  if (winnerPlayer) {
+    return
   }
-  winnerPlayer = true
+
+  //get coords of that tile clicked
+  let coords = this.document.querySelector('#board').attributes[0].value
+  console.log(coords)
+
+  // let r = parseInt(coords[0])
+  // let c = parseInt(coords[1])
+
+  // console.log(r, c)
+
+  // Changes the value of r to the height of that column so it drops in the proper spot
+  r = columnIndex[c]
+
+  if (r < 0) {
+    return //means column is full so return from function
+  }
+
+  board[r][c] = playerTurn //update the tile to the class of the current player
+  let tile = document.getElementById(r.toString() + `-` + c.toString())
+  if (playerTurn === playerBlue) {
+    tile.classList.add('blue-piece')
+    playerTurn = playerRed
+  } else {
+    tile.classList.add('red-piece')
+    playerTurn = playerBlue
+  }
+
+  r -= 1 //update the row height for that column, signifying one more element inside
+  columnIndex[2] = r //update the array height
+
+  checkWinner()
 }
 
 checkWinner = () => {
@@ -115,40 +145,14 @@ checkWinner = () => {
   }
 }
 
-setPiece = () => {
-  //Checks if winner is true to avoid adding pieces if game is done
-  if (winnerPlayer) {
-    return
-  }
-
-  //get coords of that tile clicked
-  let coords = this.attributes.id.value
-  console.log(coords)
-
-  let r = 2 //parseInt(coords[0])document.querySelector("#\\30 -0")document.querySelector("#\\30 -5")
-  let c = 2 //parseInt(coords[1])
-
-  // Changes the value of r to the height of that column so it drops in the proper spot
-  r = columnIndex[c]
-
-  if (r < 0) {
-    return //means column is full so return from function
-  }
-
-  board[r][c] = playerTurn //update the tile to the class of the current player
-  let tile = document.getElementById(r.toString() + `-` + c.toString())
-  if (playerTurn === playerBlue) {
-    tile.classList.add('blue-piece')
-    playerTurn = playerRed
+setWinner = (r, c) => {
+  let winner = document.getElementById('winner')
+  if (board[r][c] === playerBlue) {
+    winner.innerText = `${playerBlue} Wins`
   } else {
-    tile.classList.add('red-piece')
-    playerTurn = playerBlue
+    winner.innerText = `${playerRed} Wins`
   }
-
-  r -= 1 //update the row height for that column, signifying one more element inside
-  columnIndex[2] = r //update the array height
-
-  checkWinner()
+  winnerPlayer = true
 }
 
 //Event call for button to start game
