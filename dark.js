@@ -51,10 +51,10 @@ setPiece = () => {
   }
 
   //get coords of that tile clicked, this is were i got stuck, at one of the combinations of the relative path of "this" i managed to split the value of ID but didnt save and spent hours trying all sort of combinations, ill come back to this to figure it out
-  // let coords = this.id.value.split(`-`)
+  //let coords = this.id.value.split(`-`)
 
-  // let r = parseInt(coords[0])
-  // let c = parseInt(coords[1])
+  //let r = parseInt(coords[0])
+  //let c = parseInt(coords[1])
 
   // Changes the value of r to the height of that column so it drops in the proper spot  childNodes[3].childNodes
   r = columnIndex[c]
