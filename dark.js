@@ -13,9 +13,9 @@ let columnIndex = []
 
 const startGame = document.getElementById(`play`)
 let welcomeBanner = document.querySelector(`.welcome`)
-let playerId = document.getElementById(`player`)
+// let playerId = document.getElementById(`player`)
 
-
+window.onload(gameStart)
 
 gameStart = () => {
   board = []
