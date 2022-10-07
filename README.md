@@ -2,7 +2,7 @@
 
 ## Date: 10/02/2022
 
-![Alt Text](https://i.gifer.com/KbYJ.gif)
+![Alt Text](/Pics/welcome.png)
 
 ### By: Erwin Ortiz
 
@@ -12,7 +12,7 @@
 
 ### **_CONNECT 4!!!!_**
 
-![Alt Text](https://miro.medium.com/max/1280/1*A5b630g96x9PrhwB9Mvf1w.png)
+![Alt Text](/Pics/GothamConnect4.png)
 
 #### **_Connect 4 EXTREME!!!!_**
 
@@ -32,13 +32,11 @@
 
 ##### A Trello board was used to keep track of development progress and can be viewed [here](https://trello.com/b/akfU60ao/connect-4-extreme).
 
-##### The project itself was deployed and can be viewed [here](eortiz65-Connect-4.surge.sh).
+##### The project itself was deployed and can be viewed [here](Connect-4-EXTREME.surge.sh).
 
 ---
 
-##### Current version 0.1v 10/02/2022
-
-## ![Alt Text](https://i.gifer.com/KbYJ.gif)
+##### Current version 1.0v 10/07/2022
 
 ### **_Future Updates_**
 
@@ -50,8 +48,8 @@
 
 ### **_Credits_**
 
-##### Gifs: [Gifer.com](https://i.gifer.com/)
+##### Backgrounds: [Pexels.com](pexels.com)
 
-##### Images [Medium.com](https://miro.medium.com/)
+##### Images [DC Comics](https://www.dc.com/)
 
 ---

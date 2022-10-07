@@ -7,6 +7,7 @@ let welcomeBanner = document.querySelector(`.welcome`)
 let playerId = document.getElementById(`player`)
 
 playerInput = () => {
+  startGame.style.visibility = 'hidden'
   playerName = prompt(`What is your name?`)
 
   //Ask name and confirms name
