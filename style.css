@@ -4,7 +4,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  background-image: url("https://i.ytimg.com/vi/qLM_TPvp-Q4/maxresdefault.jpg");  
+  background-image: url("https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");  
   background-size: cover;
   text-align: center;
   font-family: 'Verdana', sans-serif;
@@ -23,33 +23,6 @@ h2 {
   color: rgb(241, 241, 4);
   visibility: hidden;
   
-}
-
-#board {
-	height: 540px;
-	width: 630px;
-	background-color: rgb(8, 6, 6);
-	border: 15px solid rgb(238, 238, 20);	
-	margin: 0 auto;
-	display: flex;
-	flex-wrap: wrap;
-}
-
-.tile {
-    height: 70px;
-    width: 70px;
-    margin: 5px;    
-    background-color: rgb(167, 129, 129);
-    border-radius: 50%;
-    border: 5px solid yellow;
-}
-
-.blue-piece {
-    background-color: solid blue;
-}
-
-.red-piece {
-    background-color:solid red;
 }
 
 #play {

@@ -13,9 +13,9 @@ let columnIndex = []
 
 const startGame = document.getElementById(`play`)
 let welcomeBanner = document.querySelector(`.welcome`)
-// let playerId = document.getElementById(`player`)
+let playerId = document.getElementById(`player`)
 
-window.onload(gameStart)
+playerId.innerText = playerName
 
 gameStart = () => {
   board = []
@@ -29,7 +29,6 @@ gameStart = () => {
     rows - 1,
     rows - 1
   ]
-  startGame.style.visibility = `hidden`
 
   for (let r = 0; r < rows; r++) {
     let row = []
@@ -54,7 +53,7 @@ setPiece = () => {
   }
 
   //get coords of that tile clicked
-  coords = document.getElementById(`#${this.id}`)
+  let coords = []
   console.log(coords)
 
   // let r = parseInt(coords[0])
@@ -164,3 +163,4 @@ setWinner = (r, c) => {
 
 //Event call for button to start game
 startGame.addEventListener(`click`, gameStart)
+// window.onload = gameStart()
