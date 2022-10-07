@@ -48,6 +48,8 @@
 
 ### **_Credits_**
 
+##### References: [World Wide Web Consortium (W3C)](https://www.w3.org/) [MDN Web Docs](https://developer.mozilla.org/en-US)
+
 ##### Backgrounds: [Pexels.com](https://pexel.com/)
 
 ##### Images [DC Comics](https://www.dc.com/)
