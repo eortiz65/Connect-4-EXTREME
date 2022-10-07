@@ -23,7 +23,7 @@ askName = () => {
     playerName = prompt(`What is your name?`)
   }
 
-  alert(`Welcome to the tournament, ${playerName}!!! Good luck!!!`)
+  alert(`Welcome to Gotham, ${playerName}!!! Good luck, you will need it!!!`)
 
   playerId.innerText = playerName
   welcomeBanner.style.visibility = `visible`

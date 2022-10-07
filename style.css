@@ -21,6 +21,7 @@ h2 {
   font-size: 6vmin;
   font-weight: normal;
   color: rgb(241, 241, 4);
+  visibility: hidden;
   
 }
 
