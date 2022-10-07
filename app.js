@@ -12,6 +12,18 @@ let columnIndex = []
 
 const startGame = document.getElementById('play')
 
+let playerName = prompt(`What is your name?`)
+
+/*logs value stored*/
+console.log(playerName)
+
+/*Ask name and confirms name*/
+while (confirm(`${playerName}, is this correct???`) === false) {
+  playerName = prompt(`What is your name?`)
+}
+
+alert(`Welcome to the tournament, ${playerName}!!! Good luck!!!`)
+
 gameStart = () => {
   board = []
   //Change height of the columns based on the row value

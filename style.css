@@ -9,12 +9,21 @@ body {
   text-align: center;
   font-family: 'Verdana', sans-serif;
 }
+
 h1 {
   font-size: 8vmin;
   font-weight: normal;
   color: rgb(241, 241, 4);
   
 }
+
+h2 {
+  font-size: 6vmin;
+  font-weight: normal;
+  color: rgb(241, 241, 4);
+  
+}
+
 #board {
 	height: 540px;
 	width: 630px;
