@@ -48,7 +48,7 @@
 
 ### **_Credits_**
 
-##### Backgrounds: [Pexels.com](pexels.com)
+##### Backgrounds: [Pexels.com](https://pexel.com/)
 
 ##### Images [DC Comics](https://www.dc.com/)
 
