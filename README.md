@@ -1,6 +1,6 @@
 # **_Connect 4 EXTREME!!!_**
 
-## Date: 10/02/2022
+## Date: 10/07/2022 "Yay happy birthday me!!!!"
 
 ![Alt Text](/Pics/welcome.png)
 
