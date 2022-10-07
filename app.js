@@ -12,6 +12,7 @@ let rows = 6
 let columnIndex = []
 
 const startGame = document.getElementById(`play`)
+const welcomeBanner = document.querySelector(`.welcome`)
 let playerId = document.getElementById(`player`)
 
 askName = () => {
@@ -25,6 +26,8 @@ askName = () => {
   alert(`Welcome to the tournament, ${playerName}!!! Good luck!!!`)
 
   playerId.innerText = playerName
+  welcomeBanner.style.visibility = `visible`
+
   console.log(playerId)
 }
 
