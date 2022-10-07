@@ -14,15 +14,12 @@ const startGame = document.getElementById('play')
 
 let playerName = prompt(`What is your name?`)
 
-/*logs value stored*/
-console.log(playerName)
-
-/*Ask name and confirms name*/
+//Ask name and confirms name
 while (confirm(`${playerName}, is this correct???`) === false) {
   playerName = prompt(`What is your name?`)
 }
 
-alert(`Welcome to the tournament, ${playerName}!!! Good luck!!!`)
+alert(`Welcome to the Gotham, ${playerName}. Good luck, you will need it!`)
 
 gameStart = () => {
   board = []
