@@ -4,22 +4,27 @@ let playerBlue = 'Blue'
 let playerRed = 'Red'
 let playerTurn = playerBlue
 let winnerPlayer = false
+let playerName
 let board
 let coords
 let columns = 7
 let rows = 6
 let columnIndex = []
 
-const startGame = document.getElementById('play')
+const startGame = document.getElementById(`play`)
+const playerId = document.getElementById(`player`)
 
-let playerName = prompt(`What is your name?`)
-
-//Ask name and confirms name
-while (confirm(`${playerName}, is this correct???`) === false) {
+askName = () => {
   playerName = prompt(`What is your name?`)
-}
 
-alert(`Welcome to the Gotham, ${playerName}. Good luck, you will need it!`)
+  //Ask name and confirms name
+  while (confirm(`${playerName}, is this correct???`) === false) {
+    playerName = prompt(`What is your name?`)
+  }
+
+  alert(`Welcome to the tournament, ${playerName}!!! Good luck!!!`)
+  playerId.innerText = playerName
+}
 
 gameStart = () => {
   board = []
@@ -167,4 +172,4 @@ setWinner = (r, c) => {
 }
 
 //Event call for button to start game
-startGame.addEventListener(`click`, gameStart)
+startGame.addEventListener(`click`, askName) //gameStart
