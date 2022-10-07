@@ -162,4 +162,3 @@ setWinner = (r, c) => {
 
 //Event call for button to start game
 startGame.addEventListener(`click`, gameStart)
-// window.onload = gameStart()
