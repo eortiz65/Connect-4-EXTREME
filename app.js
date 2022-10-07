@@ -177,4 +177,4 @@ setWinner = (r, c) => {
 }
 
 //Event call for button to start game
-startGame.addEventListener(`click`, askName) //gameStart
+startGame.addEventListener(`click`, gameStart)
