@@ -11,8 +11,6 @@ let rows = 6
 let columnIndex = []
 
 const startGame = document.getElementById(`play`)
-let welcomeBanner = document.querySelector(`.welcome`)
-let playerId = document.getElementById(`player`)
 
 gameStart = () => {
   startGame.style.visibility = 'hidden'
