@@ -12,7 +12,7 @@ let rows = 6
 let columnIndex = []
 
 const startGame = document.getElementById(`play`)
-const playerId = document.getElementById(`player`)
+let playerId = document.getElementById(`player`)
 
 askName = () => {
   playerName = prompt(`What is your name?`)
@@ -23,7 +23,9 @@ askName = () => {
   }
 
   alert(`Welcome to the tournament, ${playerName}!!! Good luck!!!`)
+
   playerId.innerText = playerName
+  console.log(playerId)
 }
 
 gameStart = () => {
