@@ -5,9 +5,10 @@ let playerRed = 'Red'
 let playerTurn = playerBlue
 let winnerPlayer = false
 let board
+let coords
 let columns = 7
 let rows = 6
-let columnIndex
+let columnIndex = []
 
 const startGame = document.getElementById('play')
 
@@ -42,13 +43,13 @@ gameStart = () => {
 }
 
 setPiece = () => {
-  //Checks if winner is true to avoid adding pieces if game is done document.querySelector("#board")
+  //Checks if winner is true to avoid adding pieces if game is done
   if (winnerPlayer) {
     return
   }
 
   //get coords of that tile clicked
-  let coords = this.document.querySelector('#board').attributes[0].value
+  coords = document.getElementById(`#${this.id}`)
   console.log(coords)
 
   // let r = parseInt(coords[0])
@@ -56,25 +57,25 @@ setPiece = () => {
 
   // console.log(r, c)
 
-  // Changes the value of r to the height of that column so it drops in the proper spot
-  r = columnIndex[c]
+  // Changes the value of r to the height of that column so it drops in the proper spot  childNodes[3].childNodes
+  // r = columnIndex[c]
 
-  if (r < 0) {
-    return //means column is full so return from function
-  }
+  // if (r < 0) {
+  //   return //means column is full so return from function
+  // }
 
-  board[r][c] = playerTurn //update the tile to the class of the current player
-  let tile = document.getElementById(r.toString() + `-` + c.toString())
-  if (playerTurn === playerBlue) {
-    tile.classList.add('blue-piece')
-    playerTurn = playerRed
-  } else {
-    tile.classList.add('red-piece')
-    playerTurn = playerBlue
-  }
+  // board[r][c] = playerTurn //update the tile to the class of the current player
+  // let tile = document.getElementById(r.toString() + `-` + c.toString())
+  // if (playerTurn === playerBlue) {
+  //   tile.classList.add('blue-piece')
+  //   playerTurn = playerRed
+  // } else {
+  //   tile.classList.add('red-piece')
+  //   playerTurn = playerBlue
+  // }
 
-  r -= 1 //update the row height for that column, signifying one more element inside
-  columnIndex[2] = r //update the array height
+  // r -= 1 //update the row height for that column, signifying one more element inside
+  // columnIndex[c] = r //update the array height
 
   checkWinner()
 }
@@ -84,6 +85,7 @@ checkWinner = () => {
   for (let r = 0; r < rows; r++) {
     for (let c = 0; c < columns - 3; c++) {
       if (board[r][c] != ' ') {
+        //check if tile is still empty
         if (
           board[r][c] === board[r][c + 1] &&
           board[r][c + 1] === board[r][c + 2] &&
