@@ -26,7 +26,7 @@ window.onload = () => {
 
   alert(`Welcome to Gotham, ${playerName}!!! Good luck, you will need it!!`)
 
-  // playerId.innerText = text
+  playerId.innerText = playerName
 
   welcomeBanner.style.visibility = `visible`
 }
