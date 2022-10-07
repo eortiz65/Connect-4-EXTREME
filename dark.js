@@ -15,8 +15,6 @@ const startGame = document.getElementById(`play`)
 let welcomeBanner = document.querySelector(`.welcome`)
 let playerId = document.getElementById(`player`)
 
-playerId.innerText = playerName
-
 gameStart = () => {
   startGame.style.visibility = 'hidden'
   board = []
