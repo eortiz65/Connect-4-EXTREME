@@ -1,15 +1,6 @@
 ////////////////////////////////
 // Global Variables Here
-let playerBlue = 'Blue'
-let playerRed = 'Red'
-let playerTurn = playerBlue
-let winnerPlayer = false
 let playerName
-let board
-let coords
-let columns = 7
-let rows = 6
-let columnIndex = []
 
 const startGame = document.getElementById(`play`)
 let welcomeBanner = document.querySelector(`.welcome`)

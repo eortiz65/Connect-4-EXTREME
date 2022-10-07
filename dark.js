@@ -18,7 +18,7 @@ let playerId = document.getElementById(`player`)
 playerId.innerText = playerName
 
 gameStart = () => {
-  startGame.style.visibility = `hidden`
+  startGame.style.visibility = 'hidden'
   board = []
   //Change height of the columns based on the row value
   columnIndex = [
@@ -53,9 +53,9 @@ setPiece = () => {
     return
   }
 
-  //get coords of that tile clicked
-  let coords = []
-  console.log(coords)
+  //get coords of that tile clicked, this is were i got stuck, at one of the combinations of the relative path of "this" i managed to split the value of ID but didnt save and spent hours trying all sort of combinations, ill come back to this to figure it out
+  // let coords =
+  // console.log(coords)
 
   // let r = parseInt(coords[0])
   // let c = parseInt(coords[1])
@@ -63,24 +63,24 @@ setPiece = () => {
   // console.log(r, c)
 
   // Changes the value of r to the height of that column so it drops in the proper spot  childNodes[3].childNodes
-  // r = columnIndex[c]
+  r = columnIndex[c]
 
-  // if (r < 0) {
-  //   return //means column is full so return from function
-  // }
+  if (r < 0) {
+    return //means column is full so return from function
+  }
 
-  // board[r][c] = playerTurn //update the tile to the class of the current player
-  // let tile = document.getElementById(r.toString() + `-` + c.toString())
-  // if (playerTurn === playerBlue) {
-  //   tile.classList.add('blue-piece')
-  //   playerTurn = playerRed
-  // } else {
-  //   tile.classList.add('red-piece')
-  //   playerTurn = playerBlue
-  // }
+  board[r][c] = playerTurn //update the tile to the class of the current player
+  let tile = document.getElementById(r.toString() + `-` + c.toString())
+  if (playerTurn === playerBlue) {
+    tile.classList.add('blue-piece')
+    playerTurn = playerRed
+  } else {
+    tile.classList.add('red-piece')
+    playerTurn = playerBlue
+  }
 
-  // r -= 1 //update the row height for that column, signifying one more element inside
-  // columnIndex[c] = r //update the array height
+  r -= 1 //update the row height for that column, signifying one more element inside
+  columnIndex[c] = r //update the array height
 
   checkWinner()
 }
