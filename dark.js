@@ -18,6 +18,7 @@ let playerId = document.getElementById(`player`)
 playerId.innerText = playerName
 
 gameStart = () => {
+  startGame.style.visibility = `hidden`
   board = []
   //Change height of the columns based on the row value
   columnIndex = [
