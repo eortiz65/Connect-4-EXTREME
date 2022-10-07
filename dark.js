@@ -6,7 +6,6 @@ let playerTurn = playerBlue
 let winnerPlayer = false
 let playerName
 let board
-let coords
 let columns = 7
 let rows = 6
 let columnIndex = []
@@ -32,7 +31,7 @@ gameStart = () => {
   for (let r = 0; r < rows; r++) {
     let row = []
     for (let c = 0; c < columns; c++) {
-      // Js operator to assign value of ` ` so we can further use that as an indicator to be able to add pieces.
+      //assign value of ` ` so we can further use that as an indicator to be able to add pieces.
       row.push(' ')
       // creates the board in HTML to avoid making all 42 tiles individually, it also adds the class and ID for each tile on board, starting on tile 0-0 on the top left of board and ending 5-6 on bottom right
       let tile = document.createElement('div')
@@ -52,13 +51,10 @@ setPiece = () => {
   }
 
   //get coords of that tile clicked, this is were i got stuck, at one of the combinations of the relative path of "this" i managed to split the value of ID but didnt save and spent hours trying all sort of combinations, ill come back to this to figure it out
-  // let coords =
-  // console.log(coords)
+  let coords = this.id.value.split(`-`)
 
-  // let r = parseInt(coords[0])
-  // let c = parseInt(coords[1])
-
-  // console.log(r, c)
+  let r = parseInt(coords[0])
+  let c = parseInt(coords[1])
 
   // Changes the value of r to the height of that column so it drops in the proper spot  childNodes[3].childNodes
   r = columnIndex[c]
