@@ -5,6 +5,7 @@ let playerRed = 'Red'
 let playerTurn = playerBlue
 let winnerPlayer = false
 let playerName
+// let text = "<a href='Connect-4-Dark.surge.sh'>" + playerName + '</a>'
 let board
 let coords
 let columns = 7
@@ -12,10 +13,10 @@ let rows = 6
 let columnIndex = []
 
 const startGame = document.getElementById(`play`)
-const welcomeBanner = document.querySelector(`.welcome`)
+let welcomeBanner = document.querySelector(`.welcome`)
 let playerId = document.getElementById(`player`)
 
-askName = () => {
+window.onload = () => {
   playerName = prompt(`What is your name?`)
 
   //Ask name and confirms name
@@ -25,10 +26,9 @@ askName = () => {
 
   alert(`Welcome to Gotham, ${playerName}!!! Good luck, you will need it!!`)
 
-  playerId.innerText = playerName
-  welcomeBanner.style.visibility = `visible`
+  // playerId.innerText = text
 
-  console.log(playerId)
+  welcomeBanner.style.visibility = `visible`
 }
 
 gameStart = () => {
